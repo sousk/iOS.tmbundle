@@ -15,11 +15,8 @@ print &lt;&lt;"EOF"
 
 #import "#{header}"
 
-
 @interface #{class_name} : SenTestCase {
-	NSString* def_warn;
-	// STAssertNotNil(url, def_warn);
-	// STAssertTrue([NSURL class] == [url class], def_warn);
+	id object;
 }
 @end
 
@@ -27,17 +24,18 @@ print &lt;&lt;"EOF"
 
 - (void) setUp {
    	NSLog(@"%@ setUp", self.name);
-	
-	def_warn = @"NOT OK";
+	object = [[NSObject new] retain];
+	STAssertNotNil(object, @"Cannot create NSObject instance");
 }
 
 - (void) test_Test {
-	STAssertTrue(0, def_warn);
+	STAssertTrue(0, @"should be failed");
 }
 
 
 - (void) tearDown {
-   NSLog(@"%@ tearDown", self.name);
+	NSLog(@"%@ tearDown", self.name);
+	[object release];
 }
 
 @end

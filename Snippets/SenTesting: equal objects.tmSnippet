@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>STAssertEqualObjects(${1:object}, ${2:@"expectation"}, ${3:NULL});
+$0</string>
+	<key>name</key>
+	<string>SenTesting: equal objects</string>
+	<key>scope</key>
+	<string>source.objc meta.scope.implementation, source.objc++ meta.scope.implementation</string>
+	<key>tabTrigger</key>
+	<string>stobj</string>
+	<key>uuid</key>
+	<string>9EAD4558-A31E-4911-A927-CFF8ECEFB6ED</string>
+</dict>
+</plist>

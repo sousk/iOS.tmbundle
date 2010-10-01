@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>STAssertTrue(${1:object}, ${2:NULL});
+$0</string>
+	<key>name</key>
+	<string>SenTesting: true</string>
+	<key>scope</key>
+	<string>source.objc meta.scope.implementation, source.objc++ meta.scope.implementation</string>
+	<key>tabTrigger</key>
+	<string>sttrue</string>
+	<key>uuid</key>
+	<string>FDD4FB63-154F-467A-A759-1E8679A57CF7</string>
+</dict>
+</plist>
