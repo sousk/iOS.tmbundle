@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>autoresizingMask = ${1:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight};
+$0</string>
+	<key>name</key>
+	<string>UIView: autoresizingMask(WH)</string>
+	<key>scope</key>
+	<string>source.objc meta.scope.implementation, source.objc++ meta.scope.implementation</string>
+	<key>tabTrigger</key>
+	<string>maskw</string>
+	<key>uuid</key>
+	<string>4A1E1634-C058-4898-9C8E-4DD1EF9F0BB7</string>
+</dict>
+</plist>
