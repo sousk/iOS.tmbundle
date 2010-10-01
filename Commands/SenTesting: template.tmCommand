@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+class_name = (ENV['TM_FILENAME'] || 'ClassTest').chomp('.m')
+header = class_name.chomp('Test') + '.h';
+
+print &lt;&lt;"EOF"
+#import &lt;SenTestingKit/SenTestingKit.h&gt;
+#import &lt;UIKit/UIKit.h&gt;
+
+#import "#{header}"
+
+
+@interface #{class_name} : SenTestCase {
+	NSString* def_warn;
+	// STAssertNotNil(url, def_warn);
+	// STAssertTrue([NSURL class] == [url class], def_warn);
+}
+@end
+
+@implementation #{class_name}
+
+- (void) setUp {
+   	NSLog(@"%@ setUp", self.name);
+	
+	def_warn = @"NOT OK";
+}
+
+- (void) test_Test {
+	STAssertTrue(0, def_warn);
+}
+
+
+- (void) tearDown {
+   NSLog(@"%@ tearDown", self.name);
+}
+
+@end
+
+EOF
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>SenTesting: template</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.objc, source.objc++</string>
+	<key>tabTrigger</key>
+	<string>sentest</string>
+	<key>uuid</key>
+	<string>D57EEE0A-6B15-402C-A9AD-E8ADD5246E43</string>
+</dict>
+</plist>
